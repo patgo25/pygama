@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import numpy as np
 from numba import guvectorize
 
@@ -12,7 +13,13 @@ from numba import guvectorize
     nopython=True,
     cache=True,
 )
-def sipm_noise_regulation(w_in:np.ndarray, idx_in:np.ndarray, ratio_in: float, width_in: int, idx_out:np.ndarray) -> None:
+def sipm_noise_regulation(
+    w_in: np.ndarray,
+    idx_in: np.ndarray,
+    ratio_in: float,
+    width_in: int,
+    idx_out: np.ndarray,
+) -> None:
     """
     Parameters
     ----------
